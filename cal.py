@@ -1,17 +1,17 @@
 # calculator class that will perform test on
 
 def add(x, y):
-    """add two numbers"""
+    """Add function"""
     return x + y
 
 def subtract(x, y):
-    """subtract two numbers"""
+    """Subtract Function"""
     return x - y
 
 def multiply(x, y):
-    """multiply two numbers"""
+    """Multiply Function"""
     return x * y
 
 def divide(x, y):
-    """divide two numbers"""
+    """Divide Function"""
     return x / y
