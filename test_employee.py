@@ -34,7 +34,7 @@ class TestEmployee(unittest.TestCase):
         self.assertEqual(self.emp_2.fullname, 'Tsofa Nyule')
 
         self.emp_1.first = 'Julis'
-        self.emp_2.first = 'Samuel'
+        emp_2.first = 'Samuel'
 
         self.assertEqual(self.emp_1.fullname, 'Julis Doe')
         self.assertEqual(self.emp_2.fullname, 'Samuel Nyule')
