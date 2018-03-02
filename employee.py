@@ -20,3 +20,7 @@ class Employee:
 
     def apply_raise(self):
         self.pay = int(self.pay * self.raise_amt)
+
+emp1 = Employee()
+emp2 = Employee('julius', 'tsofa', 'nyule', 2500)
+print(emp2.fullname('julius', 'nyule', 3000))
