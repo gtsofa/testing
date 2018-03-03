@@ -8,12 +8,12 @@ class TestEmployee(unittest.TestCase):
 
     # DRY
     def setUp(self):
-        """will run before any test method"""
-        self.emp_1 = Employee('John', 'Doe', 520000)
-        self.emp_2 = Employee('Tsofa', 'Nyule', 700000)
+        """will run before any single test"""
+        self.emp_1 = Employee('Tsofa', 'Nyule', 50000)
+        self.emp_2 = Employee('Kitsao', 'Baya', 60000)
 
     def tearDown(self):
-        """will run after test method"""
+        """will run after any single test"""
 
         pass
 
@@ -22,19 +22,19 @@ class TestEmployee(unittest.TestCase):
         self.assertEqual(self.emp_1.email, 'John.Doe@email.com')
         self.assertEqual(self.emp_2.email, 'Tsofa.Nyule@email.com')
 
-        emp_1.first = 'Julis'
+        emp_1.first = 'Julius'
         emp_2.first = 'Samuel'
 
-        self.assertEqual(self.emp_1.email, 'Julis.Doe@email.com')
-        self.assertEqual(self.emp_2.email, 'Samuel.Nyule@email.com')
+        self.assertEqual(self.emp_1.email, 'Julius.Nyule@email.com')
+        self.assertEqual(self.emp_2.email, 'Samuel.Baya@email.com')
 
     def test_fullname(self):
 
-        self.assertEqual(self.emp_1.fullname, 'John Doe')
-        self.assertEqual(self.emp_2.fullname, 'Tsofa Nyule')
+        self.assertEqual(self.emp_1.fullname, 'Julius Nyule')
+        self.assertEqual(self.emp_2.fullname, 'Samuel Baya')
 
-        self.emp_1.first = 'Julis'
-        emp_2.first = 'Samuel'
+        self.emp_1.first = 'Julius'
+        self.emp_2.first = 'Samuel'
 
         self.assertEqual(self.emp_1.fullname, 'Julis Doe')
         self.assertEqual(self.emp_2.fullname, 'Samuel Nyule')
