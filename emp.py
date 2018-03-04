@@ -37,7 +37,7 @@ class Developer(Employee):
         #Super().__init__(first, last, pay)
         Employee.__init__(self, first, last, pay)
         self.prog_lang = prog_lang
-        
+
 # Manager inherit from Employee
 class Manager(Employee):
 
@@ -48,17 +48,20 @@ class Manager(Employee):
         else:
             self.employees = employees
     
-def add_emp(self, emp):
-    if emp not in self.employees:
-        self.employees.append(emp)
+    def add_emp(self, emp):
+        if emp not in self.employees:
 
-def remove_emp(self, emp):
-    if emp in self.employees:
-        self.employees.remove(emp)
+            self.employees.append(emp)
 
-def print_emps(self):
-    for emp in self.employees:
-        print('-->', fullname())
+    
+
+    def remove_emp(self, emp):
+        if emp in self.employees:
+            self.employees.remove(emp)
+
+    def print_emps(self):
+        for emp in self.employees:
+            print('-->', fullname())
 
 dev_1 = Developer('tsofa', 'nyule', 6000, 'Python')
 dev_2 = Developer('samule', 'mgogo', 7000, 'Java')
