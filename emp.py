@@ -61,7 +61,8 @@ class Manager(Employee):
 
     def print_emps(self):
         for emp in self.employees:
-            print('-->', fullname())
+
+            print('-->', emp.fullname())
 
 dev_1 = Developer('tsofa', 'nyule', 6000, 'Python')
 dev_2 = Developer('samule', 'mgogo', 7000, 'Java')
@@ -71,6 +72,7 @@ mgr_1 = Manager('Francis', 'Mramba', 9000, [dev_1])
 mgr_1.add_emp(dev_2)
 
 print(mgr_1.email)
+mgr_1.print_emps()
 
 #nice helper method
 #print(help(Developer))
