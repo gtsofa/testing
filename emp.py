@@ -31,6 +31,9 @@ class Employee:
     def __str__(self):
         return '{} - {}'.format(self.fullname(), self.email)
 
+    def __add__(self, other):
+        return self.pay + other.pay
+
     # turning a regular mtd to a classmethod
     @classmethod
     def set_raise_amt(cls, amount):
@@ -74,6 +77,11 @@ dev_1 = Developer('tsofa', 'nyule', 6000, 'Python')
 dev_2 = Developer('samule', 'mgogo', 7000, 'Java')
 
 mgr_1 = Manager('Francis', 'Mramba', 9000, [dev_1])
+
+print(dev_1.__str__())
+print(dev_2)
+
+print(dev_1 + dev_2)
 
 #mgr_1.add_emp(dev_2)
 
