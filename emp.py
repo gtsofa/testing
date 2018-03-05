@@ -25,6 +25,12 @@ class Employee:
         #return int(self.pay * 1.05)
         self.pay = int(self.pay * self.raise_amount)
 
+    def __repr__(self):
+        return "Employee('{}' '{}' '{}')".format(self.first, self.last, self.pay)
+
+    def __str__(self):
+        return '{} - {}'.format(self.fullname(), self.email)
+
     # turning a regular mtd to a classmethod
     @classmethod
     def set_raise_amt(cls, amount):
@@ -69,10 +75,13 @@ dev_2 = Developer('samule', 'mgogo', 7000, 'Java')
 
 mgr_1 = Manager('Francis', 'Mramba', 9000, [dev_1])
 
-mgr_1.add_emp(dev_2)
+#mgr_1.add_emp(dev_2)
 
-print(mgr_1.email)
-mgr_1.print_emps()
+
+#print(mgr_1.email)
+#mgr_1.print_emps()
+
+#print(isinstance(mgr_1, Manager))
 
 #nice helper method
 #print(help(Developer))
